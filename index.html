@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res.css">
+    <title>MAILA-DAIKO-VATTI</title>
+</head>
+<body>
+    <header>
+        <h1>MAILA-DAIKO-VATTI</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#chef">Chef Bio</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#hours">Opening Hours</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#location">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Our Restaurant</h2>
+        <p>Welcome to Restaurant Name, where we serve delicious meals in a cozy, welcoming environment. Our goal is to provide a memorable dining experience.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul>
+            <li>Grilled Chicken - Tender grilled chicken served with fresh herbs. - $12</li>
+            <li>Vegan Pasta - A mix of seasonal vegetables with homemade pasta. - $14</li>
+            <li>Seafood Paella - A delightful mix of seafood and spices. - $20</li>
+            <li>Chocolate Lava Cake - Rich chocolate cake with a molten center. - $8</li>
+        </ul>
+    </section>
+
+    <section id="chef">
+        <h2>Meet Our Chef</h2>
+        <img src="https://png.pngtree.com/background/20230426/original/pngtree-chef-preparing-a-dish-in-a-restaurant-picture-image_2482776.jpg" alt="Chef Name">
+        <p>Chef Anil brings over 20 years of culinary expertise, combining international flavors with local ingredients to create unique dishes.</p>
+    </section>
+
+    <section id="reservation">
+        <h2>Make a Reservation</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" required>
+
+            <button type="submit">Reserve</button>
+        </form>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <p>"The food was amazing, and the service was top-notch!"</p>
+        <p>"Best dining experience we’ve had in years!"</p>
+    </section>
+
+    <section id="hours">
+        <h2>Opening Hours</h2>
+        <p>Monday - Friday: 11:00 AM - 9:00 PM</p>
+        <p>Saturday - Sunday: 12:00 PM - 10:00 PM</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <img src="https://static01.nyt.com/images/2014/12/31/dining/20141231-DISHES-slide-921Q/20141231-DISHES-slide-921Q-master1050.jpg"width="300" height="200"  alt="Dish 1">
+        <img src="https://th.bing.com/th/id/OIP.-9O-jeDycnKOWyt1c-F0IQHaE8?w=1200&h=800&rs=1&pid=ImgDetMain"width="300" height="200"  alt="Dish 2">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/85/31/9c/truffled-turbot.jpg?w=1200&h=-1&s=1"width="300" height="200"  alt="Restaurant Interior">
+    </section>
+
+    <section id="location">
+        <h2>Find Us</h2>
+        <div id="map"></div>
+        <p>123 Restaurant St, Food City, FC 12345</p>
+    </section>
+
+    <footer>
+        <p>Follow us on Social Media</p>
+        <p>Email: anil@restaurantname.com | Phone: 4984635</p>
+        <p>© 2024 maila daiko vatti. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const restaurantLocation = { lat: 37.7749, lng: -122.4194 }; // Replace with actual coordinates
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: restaurantLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: restaurantLocation,
+                map: map,
+            });
+        }
+    </script>
+</body>
+</html>
